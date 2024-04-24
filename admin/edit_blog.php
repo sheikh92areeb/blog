@@ -114,18 +114,18 @@
 		{
 			$sql3 = "UPDATE blog SET blog_title='$title',Blog_body='$body',category='$category',author_id='$author_id' WHERE blog_id='$blog_id'";
 					$query3 = mysqli_query($config, $sql3);
-					if ($query3) 
-					{
-						$msg = ['Post updated successfully','alert-success'];
-						$_SESSION['msg']=$msg;
-						header("location:index.php");
-					}
-					else
-					{
-						$msg = ['Failed, Please try again','alert-danger'];
-						$_SESSION['msg']=$msg;
-						header("location:index.php");
-					}
+				if ($query3) 
+				{
+					$msg = ['Post updated successfully','alert-success'];
+					$_SESSION['msg']=$msg;
+					header("location:index.php");
+				}
+				else
+				{
+					$msg = ['Failed, Please try again','alert-danger'];
+					$_SESSION['msg']=$msg;
+					header("location:index.php");
+				}
 		}
 	}	
 ?>
